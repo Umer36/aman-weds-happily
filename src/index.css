@@ -107,3 +107,86 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes float-heart-1 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100px, -120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float-heart-2 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(80px, -120vh) rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float-heart-3 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50px, -120vh) rotate(180deg) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-float-heart-1 {
+  animation: float-heart-1 12s ease-in-out infinite;
+}
+
+.animate-float-heart-2 {
+  animation: float-heart-2 15s ease-in-out infinite;
+}
+
+.animate-float-heart-3 {
+  animation: float-heart-3 10s ease-in-out infinite;
+}
+
+.table-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 192, 203, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 3s infinite;
+}

@@ -1,48 +1,54 @@
 import { useState, useEffect } from "react";
-import { Heart, Calendar, Clock, MapPin } from "lucide-react";
+import { Heart, Calendar, Clock, MapPin, Sparkles, Music } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/wedding-hero.jpg";
 
 const scheduleEvents = [
   {
-    time: "10:00 AM",
-    title: "Welcome & Registration",
-    description: "Guest arrival and welcome refreshments",
+    date: "19 OCT",
+    title: "Haldi bida for Bride",
+    description: "Traditional turmeric ceremony for the bride",
+    icon: Sparkles,
+  },
+  {
+    date: "20 OCT",
+    title: "Allah nami Khana",
+    description: "Lunch - Monday",
     icon: Heart,
   },
   {
-    time: "11:00 AM",
-    title: "Haldi Ceremony",
-    description: "Traditional turmeric ceremony with family",
+    date: "21 OCT",
+    title: "Biya",
+    description: "Morning ceremony",
     icon: Calendar,
   },
   {
-    time: "2:00 PM",
-    title: "Lunch Break",
-    description: "Traditional Indian wedding feast",
-    icon: Clock,
+    date: "21 OCT",
+    title: "Badi Haldi",
+    description: "Evening celebration",
+    icon: Sparkles,
   },
   {
-    time: "4:00 PM",
-    title: "Mehendi Ceremony",
-    description: "Intricate henna art and music",
+    date: "22 OCT",
+    title: "Mehandi and Dance",
+    description: "Intricate henna art and musical evening",
+    icon: Music,
+  },
+  {
+    date: "23 OCT",
+    title: "Wedding",
+    description: "The sacred wedding ceremony",
     icon: Heart,
   },
   {
-    time: "7:00 PM",
-    title: "Sangeet Night",
-    description: "Musical evening with dance performances",
+    date: "24 OCT",
+    title: "PuranPoli (Haat baratni)",
+    description: "Traditional post-wedding celebration",
     icon: Calendar,
   },
   {
-    time: "11:00 AM (Next Day)",
-    title: "Wedding Ceremony",
-    description: "The sacred wedding rituals",
-    icon: Heart,
-  },
-  {
-    time: "1:00 PM",
-    title: "Reception & Dinner",
+    date: "25 OCT",
+    title: "Reception",
     description: "Celebration dinner and festivities",
     icon: Clock,
   },
@@ -114,11 +120,7 @@ const Index = () => {
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-foreground">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-5 h-5 text-primary" />
-                  <span className="font-sans">December 15-16, 2024</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <span className="font-sans">Grand Celebration Hall</span>
+                  <span className="font-sans">19 - 25 October 2024</span>
                 </div>
               </div>
             </div>
@@ -158,8 +160,8 @@ const Index = () => {
                                 {event.title}
                               </h3>
                               <div className="flex items-center gap-2 text-primary font-semibold">
-                                <Clock className="w-4 h-4" />
-                                <span className="font-sans">{event.time}</span>
+                                <Calendar className="w-4 h-4" />
+                                <span className="font-sans">{event.date}</span>
                               </div>
                             </div>
                             <p className="text-muted-foreground font-sans">

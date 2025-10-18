@@ -1,5 +1,9 @@
 # Welcome to your Lovable project
 
+## Live Website
+
+**Live URL**: https://aman-weds-happily.vercel.app/
+
 ## Project info
 
 **URL**: https://lovable.dev/projects/dbd7f0bc-73a3-409e-8ecb-6b440d5497ac
